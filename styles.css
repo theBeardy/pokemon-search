@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Enriqueta:wght@400;500;600;700&family=Onest:wght@100..900&display=swap');
 
 :root {
-    --theme-color-1: lightyellow;
-    --theme-color-2: lightgreen;
-    --theme-color-3: rgb(219, 60, 60);
+    --theme-color-1:  #FFDE00;
+    --theme-color-2: #FF0000;
+    --theme-color-3: #CC0000;
+    --theme-color-4: #3B4CCA;
+    --theme-color-5: #B3A125;
     --bg-color: rgb(60, 60, 60);
     --scale: 1.3;
     --font-1: Onest, sans-serif;
@@ -77,15 +79,6 @@ h1:hover {
     position: relative;
 }
 
-.input-wrapper {
-    background: linear-gradient(-45deg, var(--theme-color-1), var(--theme-color-2));
-    border-radius: 8px;
-}
-
-.input-wrapper:hover {
-    background: linear-gradient(45deg, var(--theme-color-1), var(--theme-color-2));
-}
-
 input {
     border: none;
     height: 20px;
@@ -98,17 +91,10 @@ input {
     position: relative;
 }
 
-input::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border: 5px solid linear-gradient(to right, rgb(145, 255, 0), rgb(162, 0, 255));
-}
-
 input::placeholder {
     font-family: var(--font-1);
     font-weight: 300;
+    color: black;
 }
 
 button {
@@ -120,6 +106,8 @@ button {
     font-family: var(--font-1);
     font-weight: 300;
     margin: 10px;
+    margin-bottom: 40px;
+    color: white;
 }
 
 button:hover {
@@ -130,24 +118,31 @@ button:hover {
 #stat-block {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     margin: 0 auto;
     background-color: var(--stat-block);
-    height: 500px;
-    width: 500px;
+    height: auto;
+    width: auto;
     border-radius: 14px;
+    font-family: var(--font-1);
 }
 
-.stat-block {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(6, 30px);
-    row-gap: 90px;
-    font-size: 1.1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+table {
+    display: none;
+    border-collapse: collapse;
+    margin: 25px 0;
+    border: 4px solid var(--theme-color-4);
+}
+
+th {
+    font-weight: 500;
+    padding: 10px;
+    text-align: left;
+    background-color: var(--theme-color-4);
+}
+
+td {
+    padding: 10px;
 }
 
 .stat-block > div {
@@ -159,21 +154,13 @@ button:hover {
 #sprite {
     height: 200px;
     width: 200px;
-    margin-top: 110px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #sprite:hover {
     transform: scale(var(--scale));
     transition: 300ms ease-in-out;
-}
-
-#types {
-    display: flex;
-    grid-column: span 2;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
 }
 
 .type {
@@ -182,5 +169,5 @@ button:hover {
     padding: 0 4px;
     background-color: var(--fire);
     box-shadow: 1px 1px 1px var(--shadow);
-    color: black;
+    color: whitesmoke;
 }

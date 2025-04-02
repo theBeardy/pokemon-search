@@ -13,6 +13,7 @@ const speed = document.getElementById("speed");
 const avatar = document.getElementById("sprite");
 const searchBtn = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
+const table = document.querySelector("table");
 const pokeURL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 let searchResUrl = "";
 
@@ -36,13 +37,12 @@ const formatName = (str) => {
 
 const typesStringify = (obj) => {
     const typesArr = obj.types;
-    types.innerHTML = `Type: `;
-
+    types.innerHTML = ``;
     let index = 1;
 
     typesArr.forEach((e) => {
-        types.innerHTML += `<div class="type" id="type ${index}">${formatName(e.type.name)}</div>`;
-        document.getElementById(`type ${index}`).style.backgroundColor = `var(--${e.type.name})`;
+        types.innerHTML += `<p class="type" id="type-${index}">${formatName(e.type.name)}</p>`;
+        document.getElementById(`type-${index}`).style.backgroundColor = `var(--${e.type.name})`;
         index++;
     });
 
@@ -51,17 +51,18 @@ const typesStringify = (obj) => {
 
 const updateStatBlock = (data) => {
     avatar.src = data.sprites.front_default;
-    pokemonName.innerText = `Name: ${formatName(data.name).toUpperCase()}`;
-    pokemonID.innerText = `PokeDex: ${data.id}`;
-    weight.innerText = `Weight: ${data.weight}`;
-    height.innerText = `Height: ${data.height}`;
+    table.style.display = "flex";
+    pokemonName.innerText = `${formatName(data.name).toUpperCase()}`;
+    pokemonID.innerText = `${data.id}`;
+    weight.innerText = `${data.weight}`;
+    height.innerText = `${data.height}`;
     types.innerHTML = typesStringify(data);
-    hp.innerText = `HP: ${data.stats[0].base_stat}`;
-    atk.innerText = `Atk: ${data.stats[1].base_stat}`;
-    def.innerText = `Def: ${data.stats[2].base_stat}`;
-    spAtk.innerText = `SpAtk: ${data.stats[3].base_stat}`;
-    spDef.innerText = `SpDef: ${data.stats[4].base_stat}`;
-    speed.innerText = `Speed: ${data.stats[5].base_stat}`;
+    hp.innerText = `${data.stats[0].base_stat}`;
+    atk.innerText = `${data.stats[1].base_stat}`;
+    def.innerText = `${data.stats[2].base_stat}`;
+    spAtk.innerText = `${data.stats[3].base_stat}`;
+    spDef.innerText = `${data.stats[4].base_stat}`;
+    speed.innerText = `${data.stats[5].base_stat}`;
 }
 
 const processSearch = () => {
