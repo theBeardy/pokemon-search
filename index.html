@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" class="stylesheet">
+    <title>Pokemon Search App</title>
+</head>
+<body>
+    <main>
+        <div class="title-and-input">
+            <h1>Who's That PokeMon!?</h1>
+            <p class="description">You can either lookup a pokemon by Name to get some info about their stats, or you can look up a pokedex ID to find out what pokemon has that ID.</p>
+            <div class="input-cont">
+                <div class="input-wrapper">
+                    <input type="text" id="search-input" placeholder="Enter Pokemon Name" required>
+                </div>
+                <button id="search-button">I Choose You!</button>
+            </div>
+        </div>
+        <div id="stat-block">
+            <img src="https://www.freeiconspng.com/thumbs/pokeball-png/pokeball-transparent-png-2.png" alt="PokeBall" id="sprite">
+            <div class="stat-block">
+                <div id="pokemon-name">Name: </div>
+                <div id="pokemon-id">PokeDex: </div>
+                <div id="weight">Weight: </div>
+                <div id="height">Height: </div>
+                <div id="hp">HP: </div>
+                <div id="attack">Atk: </div>
+                <div id="defense">Def: </div>
+                <div id="special-attack">SpAtk: </div>
+                <div id="special-defense">SpDef: </div>
+                <div id="speed">Speed: </div>
+                <div id="types">Types: </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./script.js" defer></script>
+</html>

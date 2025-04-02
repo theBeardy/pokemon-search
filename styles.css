@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Enriqueta:wght@400;500;600;700&family=Onest:wght@100..900&display=swap');
+
+:root {
+    --theme-color-1: lightyellow;
+    --theme-color-2: lightgreen;
+    --theme-color-3: rgb(219, 60, 60);
+    --bg-color: rgb(60, 60, 60);
+    --scale: 1.3;
+    --font-1: Onest, sans-serif;
+    --font-2: Chewy, sans-serif;
+    --font-3: Enriqueta, sans-serif;
+    --shadow: rgba(0,0,0,0.3);
+    --poison: purple;
+    --ghost: darkorchid;
+    --fire: rgb(216, 103, 11);
+    --grass: green;
+    --bug: yellowgreen;
+    --rock:sienna;
+    --ice: lightcyan;
+    --dragon: rgb(34, 36, 156);
+    --dark: rgb(51, 51, 51);
+    --psychic: pink;
+    --flying: rgb(161, 138, 168);
+    --steel: rgb(150, 147, 142);
+    --fighting: rgb(116, 45, 13);
+    --ground: rgb(128, 79, 57);
+    --water: rgb(76, 148, 177);
+    --fairy: rgb(226, 152, 183);
+    --electric: yellow;
+    --normal: white;
+}
+
+html {
+    background-color: var(--bg-color);
+    color: whitesmoke;
+    font-family: var(--font-2);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    transform: scale(var(--scale));
+    font-size: 4rem;
+    text-shadow: 3px 3px 3px black;
+    color: rgb(218, 57, 57);
+}
+
+h1:hover {
+    transform: scale(calc(var(--scale) * 1.2));
+    transition: 300ms ease-in-out;
+}
+
+.description {
+    font-size: 1.15rem;
+    width: 50vw;
+    text-align: center;
+    margin: 10px auto;
+    font-family: var(--font-3);
+}
+
+.input-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    transform: scale(var(--scale));
+    position: relative;
+}
+
+.input-wrapper {
+    background: linear-gradient(-45deg, var(--theme-color-1), var(--theme-color-2));
+    border-radius: 8px;
+}
+
+.input-wrapper:hover {
+    background: linear-gradient(45deg, var(--theme-color-1), var(--theme-color-2));
+}
+
+input {
+    border: none;
+    height: 20px;
+    width: 20vw;
+    background-color: var(--theme-color-1);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 4px;
+    text-align: center;
+    position: relative;
+}
+
+input::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 5px solid linear-gradient(to right, rgb(145, 255, 0), rgb(162, 0, 255));
+}
+
+input::placeholder {
+    font-family: var(--font-1);
+    font-weight: 300;
+}
+
+button {
+    height: auto;
+    background-color: var(--theme-color-2);
+    padding: 10px;
+    width: 20vw;
+    border-radius: 8px;
+    font-family: var(--font-1);
+    font-weight: 300;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: var(--theme-color-3);
+    color: whitesmoke;
+}
+
+#stat-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--stat-block);
+    height: 500px;
+    width: 500px;
+    border-radius: 14px;
+}
+
+.stat-block {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(6, 30px);
+    row-gap: 90px;
+    font-size: 1.1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.stat-block > div {
+    height: 80px;
+    width: 120px;
+    font-family: var(--font-1);
+}
+
+#sprite {
+    height: 200px;
+    width: 200px;
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
+
+#sprite:hover {
+    transform: scale(var(--scale));
+    transition: 300ms ease-in-out;
+}
+
+#types {
+    display: flex;
+    grid-column: span 2;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.type {
+    margin: 0 4px;
+    border-radius: 5px;
+    padding: 0 4px;
+    background-color: var(--fire);
+    box-shadow: 1px 1px 1px var(--shadow);
+    color: black;
+}
