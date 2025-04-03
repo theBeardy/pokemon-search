@@ -174,11 +174,6 @@ td {
     width: 200px;
 }
 
-#sprite:hover {
-    transform: scale(var(--scale));
-    transition: 300ms ease-in-out;
-}
-
 .type {
     margin: 0 4px;
     border-radius: 5px;
