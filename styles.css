@@ -149,7 +149,6 @@ table {
     display: none;
     border-collapse: collapse;
     margin: 25px 0;
-    border: 4px solid var(--theme-color-4);
 }
 
 th {
