@@ -52,7 +52,7 @@ const typesStringify = (obj) => {
 
 const updateStatBlock = (data) => {
     avatar.src = data.sprites.front_default;
-    details.classList.toggle("hidden");
+    details.style.display = "none";
     table.style.display = "flex";
     pokemonName.innerText = `${formatName(data.name).toUpperCase()}`;
     pokemonID.innerText = `${data.id}`;
