@@ -6,7 +6,7 @@
     --theme-color-3: #CC0000;
     --theme-color-4: #3B4CCA;
     --theme-color-5: #B3A125;
-    --bg-color: rgb(60, 60, 60);
+    --bg-color: rgb(18, 54, 74);
     --scale: 1.3;
     --font-1: Onest, sans-serif;
     --font-2: Chewy, sans-serif;
@@ -38,6 +38,10 @@ html {
     font-family: var(--font-2);
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -49,6 +53,7 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    text-align: center;
     transform: scale(var(--scale));
     font-size: 4rem;
     text-shadow: 3px 3px 3px black;
@@ -58,6 +63,14 @@ h1 {
 h1:hover {
     transform: scale(calc(var(--scale) * 1.2));
     transition: 300ms ease-in-out;
+    text-shadow: 3px 3px 5px black;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .description {
@@ -169,5 +182,43 @@ td {
     padding: 0 4px;
     background-color: var(--fire);
     box-shadow: 1px 1px 1px var(--shadow);
-    color: whitesmoke;
+    text-align: center;
+}
+
+#type-ice,
+#type-psychic,
+#type-steel,
+#type-fairy,
+#type-electric,
+#type-normal,
+#type-flying,
+#type-bug,
+#type-water {
+    color: black;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(.8);
+        text-align: center;
+    }
+    h1:hover {
+        transform: scale(1);
+    }
+    .description {
+        font-size: 14px;
+    }
+    input {
+        width: 150px;
+        height: 22px;
+    }
+    button {
+        width: 150px;
+    }
+    .stat-block {
+        transform: scale(.8);
+    }
 }

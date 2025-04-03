@@ -14,6 +14,7 @@ const avatar = document.getElementById("sprite");
 const searchBtn = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
 const table = document.querySelector("table");
+const details = document.querySelector("details");
 const pokeURL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 let searchResUrl = "";
 
@@ -41,8 +42,8 @@ const typesStringify = (obj) => {
     let index = 1;
 
     typesArr.forEach((e) => {
-        types.innerHTML += `<p class="type" id="type-${index}">${formatName(e.type.name)}</p>`;
-        document.getElementById(`type-${index}`).style.backgroundColor = `var(--${e.type.name})`;
+        types.innerHTML += `<p class="type" id="type-${e.type.name}">${formatName(e.type.name)}</p>`;
+        document.getElementById(`type-${e.type.name}`).style.backgroundColor = `var(--${e.type.name})`;
         index++;
     });
 
@@ -51,6 +52,7 @@ const typesStringify = (obj) => {
 
 const updateStatBlock = (data) => {
     avatar.src = data.sprites.front_default;
+    details.classList.toggle("hidden");
     table.style.display = "flex";
     pokemonName.innerText = `${formatName(data.name).toUpperCase()}`;
     pokemonID.innerText = `${data.id}`;
