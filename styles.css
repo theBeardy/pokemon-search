@@ -200,7 +200,16 @@ td {
     color: black;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
+    h1 {
+        font-size: 48px;
+    }
+    h1:hover {
+        transform: scale(1.4);
+    }
+}
+
+@media (max-width: 600px) {
     h1 {
         display: flex;
         justify-content: center;
