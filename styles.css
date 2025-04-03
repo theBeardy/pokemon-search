@@ -38,6 +38,10 @@ html {
     font-family: var(--font-2);
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .hidden {
     display: none;
 }
@@ -120,7 +124,7 @@ button {
     font-family: var(--font-1);
     font-weight: 300;
     margin: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: white;
 }
 
@@ -168,8 +172,6 @@ td {
 #sprite {
     height: 200px;
     width: 200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 #sprite:hover {
@@ -228,5 +230,7 @@ td {
     }
     .stat-block {
         transform: scale(.8);
+        width: 425px;
+        margin: 0;
     }
 }
